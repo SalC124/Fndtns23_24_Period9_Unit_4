@@ -16,7 +16,7 @@ public class BeanCounter {
 
     // toString method
     public String toString() {
-        return "name: " + name + " Bean Count: " + beanCount;
+        return "BeanCounter " + name + " has " + beanCount + " beans.";
     }
 
     // getters
