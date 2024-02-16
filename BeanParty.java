@@ -42,22 +42,26 @@ public class BeanParty {
                     System.out.print("What should we call " + pintoName + " now? ");
                     pintoName = input.nextLine() + " (Pinto)";
                     System.out.print("What should we call " + kidneyName + " now? ");
-                    kidneyName = input.nextLine() + " (Pinto)";
+                    kidneyName = input.nextLine() + " (Kidney)";
                     System.out.print("What should we call " + blackName + " now? ");
-                    blackName = input.nextLine() + " (Pinto)";
-                }else if (Response.substring(0, 4).equals("RESET")) {
-                    if(Response.substring(Response.length() - 2, Response.length()).equals("-y")) {
-                        
+                    blackName = input.nextLine() + " (Black)";
+                }else if (Response.equals("RESET")) {
+                    System.out.println("Are you sure you want to reset? THIS IS IRREVERSIBLE! (Y/N)");
+                    Response = input.nextLine();
+                    while (!Response.equals("Y") && !Response.equals("N")) {
+                        System.out.println("Invalid command.");
                     }
-                    System.out.println("Are you sure you want to reset? \n (y/n)");
-                    pintoCount = 0;
-                    kidneyCount = 0;
-                    blackCount = 0;
-                    pintoCounter = new BeanCounter(pintoName, pintoCount);
-                    kidneyCounter = new BeanCounter(kidneyName, kidneyCount);
-                    blackCounter = new BeanCounter(blackName, blackCount);
+                    if (Response.equals("Y")) {
+                        pintoCount = 0;
+                        kidneyCount = 0;
+                        blackCount = 0;
+                        pintoCounter = new BeanCounter(pintoName, pintoCount);
+                        kidneyCounter = new BeanCounter(kidneyName, kidneyCount);
+                        blackCounter = new BeanCounter(blackName, blackCount);
+                        System.out.println("The BeanCounters have been reset.");
+                    }
                 } else {
-                System.out.println("Invalid command.");
+                    System.out.println("Invalid command.");
                 }
                 System.out.println();
                 Response = input.nextLine();
