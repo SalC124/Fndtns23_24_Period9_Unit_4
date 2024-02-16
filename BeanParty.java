@@ -50,6 +50,7 @@ public class BeanParty {
                     Response = input.nextLine();
                     while (!Response.equals("Y") && !Response.equals("N")) {
                         System.out.println("Invalid command.");
+                        Response = input.nextLine();
                     }
                     if (Response.equals("Y")) {
                         pintoCount = 0;
@@ -59,6 +60,8 @@ public class BeanParty {
                         kidneyCounter = new BeanCounter(kidneyName, kidneyCount);
                         blackCounter = new BeanCounter(blackName, blackCount);
                         System.out.println("The BeanCounters have been reset.");
+                    }else{
+                        System.out.println("Reset cancelled.");
                     }
                 } else {
                     System.out.println("Invalid command.");
