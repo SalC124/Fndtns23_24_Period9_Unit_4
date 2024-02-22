@@ -8,7 +8,7 @@ public class Vehicle {
     private double totalMiles;
 
     // Constructors
-    public Vehicle(String make, String model, double fuelCapacity, double fuelLevel, double mpg) {
+    public Vehicle(String make, String model, double fuelCapacity, double mpg, double fuelLevel) {
         this.make = make;
         this.model = model;
         this.fuelCapacity = fuelCapacity;
@@ -79,6 +79,6 @@ public class Vehicle {
     }
     // Override toString
     public String toString() {
-        return make + " " + model + " | " + mpg + "mi/gal" + " | Fuel Level: " + fuelLevel + "gal/" + fuelCapacity + "gal in tank | Range = " + getRange() + "mi | Total Miles = " + totalMiles + "mi";
+        return make + " " + model + " | " + mpg + " mi/gal" + " | Fuel Level: " + fuelLevel + " gal/" + fuelCapacity + " gal in tank | Range = " + getRange() + " mi | Total Miles = " + totalMiles + " mi";
     }
 }
