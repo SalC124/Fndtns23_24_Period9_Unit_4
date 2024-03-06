@@ -1,3 +1,4 @@
+// By Sal
 // help used: Circle2d to see if what I was typing was in the right format
 import java.lang.Math;
 public class Javamon {
